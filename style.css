@@ -1,3 +1,264 @@
+/* Global Rules */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    font-family: "Roboto" , system-ui, sans-serif;
+}
+
+/* Main Styling */
+
+/* SideBar */
+
+.sideBar{
+    flex: 25%;
+    min-height: 100%;
+    background: #1c94d3;
+    color: white;
+    fill: white;
+    padding: 15px 20px;
+}
+.sideBar > .title{
+    display:flex;
+    gap: 10px;
+    font-size: .9rem;
+    align-items: center;
+    svg{
+        width: 45px;
+    }
+}
+.sideBar nav {
+    margin-top: 50px;
+    list-style:none;
+    padding-left: 5px;
+}
+.sideBar nav ul li{
+    display:flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 35px;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    font-weight: bold;
+    user-select: none;
+    svg{
+        width: 23px;
+    }
+}
+.sideBar nav ul li.lastGeneralItem{
+    margin-top: 80px;
+}
+
+
+.content{
+    flex: 100%;
+    background:#e2e8f0;
+}
+
+
+/* Header */
+.content .header{
+    padding: 10px 30px;
+    box-shadow: 0 0 20px #999;
+    background: white;
+}
+
+
+.header .searchPanel{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0 10px;
+}
+
+.header .searchPanel .search{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    svg{
+        width: 25px;
+    }
+}
+.header .searchPanel .search input{
+    border:none;
+    width: 100%;
+    border-radius: 50vw;
+    background:#e2e8f0;
+    padding: 5px 10px;
+    outline: transparent;
+    caret-color: beige;
+}
+
+.header .searchPanel .profile{
+    justify-self: end;
+    display:flex;
+    gap: 30px;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    svg{
+        width: 20px;
+    }
+}
+.header .searchPanel .profile img{
+    border-radius: 50vw;
+}
+
+.header .welcomePanel{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 10px 15px 10px;
+}
+.header .welcomePanel .profilePreview{
+    display:flex;
+    gap:10px;
+    font-weight: bold;
+    align-items: center;
+}
+.header .profilePreview > img{
+    border-radius: 50vw;
+}
+.header .profilePreview .text .userName{
+    font-size: 1.5rem;
+}
+.header .welcomePanel .quickActions button{
+    padding: 10px 15px;
+    font-size: 1rem;
+    border:none;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    /* text-align: center; */
+    border-radius: 50vw;
+    background:#1992d4;
+    margin: 0 8px;
+}
+
+
+/* Main Content "Projects" */
+
+.projectsPanel{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 40% 50%;
+    padding: 30px 15px;
+    gap: 20px;
+}
+.projectsPanel .projects, .news .announcements , .news .trending{
+    position:relative;
+    margin-top: 30px;
+}
+.projectsPanel .projects::before, .news .announcements::before , .news .trending::before{
+    top: -40px;
+    font-size: 1.4rem;
+    margin: 5px 0;
+    display:block;
+    font-weight: 500;
+    content: "mainTitle";
+    position: absolute;
+}
+
+.projectsPanel .projects{
+    grid-row: 1 / -1;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.projectsPanel .projects::before{
+    content:"Your Projects"
+}
+.projectsPanel .projects .box-project{
+    padding: 30px 15px;
+    display:flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    border-left:#f0b835 solid 5px;
+    border-radius: 5px;
+    background:white;
+        box-shadow: 0 0 10px #999;
+
+}
+.projects .box-project .title{
+    font-size: 1.1rem;
+    font-weight:bold;
+    margin: 5px 0;
+}
+.projects .box-project p{
+    color: #8e8e8e;
+    font-size: 14px;
+}
+.projects .box-project .reactions{
+    margin-left: auto;
+    width: fit-content;
+}
+.projects .box-project .reactions button{
+    border:none;
+    background:white;
+    appearance: none;
+    margin: 0 10px;
+    svg{
+        width: 23px;
+    }
+}
+
+/* News Panel */
+.news .announcements::before{
+    content: "Announcements"
+}
+.news .announcements .container{
+    padding: 25px 30px;
+    background:white;
+    margin-right: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #999;
+}
+.news .announcements .container .row{
+    border-bottom: solid 1px grey;
+    padding: 10px 0;
+}
+.news .container .row .title{
+    font-size: .9rem;
+    font-weight:bold;
+    margin: 2px 0;
+}
+.news .container .row p{
+    font-size: 14px;
+    color: #a2a2a2;
+}
+
+.news .trending::before{
+    content: "Trending";
+}
+.news .trending{
+    margin-top: 100px;
+}
+.news .trending .container{
+    padding: 15px;
+    background:white;
+    margin-right: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #999;   
+}
+.news .trending .row{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.news .row img{
+    border-radius: 50vw;
+}
+.news .trending .row p{
+    color: #a2a2a2;
+}
+
 svg{
     width:30px;
 }
