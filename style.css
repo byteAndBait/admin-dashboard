@@ -22,7 +22,7 @@ body{
     color: white;
     fill: white;
     transition: 1s;
-    padding: 15px 25px;
+    padding: 15px;
 }
 
 .sideBar.closed h1{
@@ -33,43 +33,43 @@ body{
     padding:15px 10px;
 }
 .sideBar.closed nav{
-    margin-left: 20px;
+    transition:1s;
+    margin-left: 100px;
 }
 .sideBar > .title{
     display:flex;
     gap: 10px;
-    font-size: .9rem;
+    font-size: .8rem;
     align-items: center;
     svg{
         width: 45px;
     }
 }
 .sideBar nav {
-    margin-top: 50px;
+    margin-top: 40px;
     list-style:none;
-    padding-left: 5px;
 }
 .sideBar nav ul li{
     display:flex;
     align-items: center;
-    gap: 35px;
-    padding: 10px;
-    margin: 10px 0;
+    gap: 23px;
+    padding: 8px 10px;
+    margin: 5px 0;
     border-radius: 10px;
     text-transform: capitalize;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
     transition: 300ms;
     user-select: none;
     svg{
-        width: 23px;
+        width: 22px;
     }
 }
 .sideBar nav ul li:hover{
     background-color: rgb(255,255,255,0.4);
 }
 .sideBar nav ul li.lastGeneralItem{
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 
@@ -159,9 +159,15 @@ body{
     /* text-align: center; */
     border-radius: 50vw;
     background:#1992d4;
+    transition: 300ms ease-in-out;
     margin: 0 8px;
 }
-
+.header .welcomePanel .quickActions button:hover{
+    border: solid 1px #1992d4;
+    background: white;
+    color: #1992d4;
+    
+}
 
 /* Main Content "Projects" */
 
@@ -286,6 +292,3 @@ body{
     color: #a2a2a2;
 }
 
-svg{
-    width:30px;
-}
