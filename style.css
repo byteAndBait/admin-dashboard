@@ -16,13 +16,13 @@ body{
 /* SideBar */
 
 .sideBar{
-    width: 30%;
+    width: 25%;
     min-height: 100%;
     background: #1c94d3;
     color: white;
     fill: white;
     transition: 1s;
-    padding: 15px 20px;
+    padding: 15px 25px;
 }
 
 .sideBar.closed h1{
@@ -52,15 +52,21 @@ body{
 .sideBar nav ul li{
     display:flex;
     align-items: center;
-    margin-top: 20px;
     gap: 35px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
     text-transform: capitalize;
     font-size: 1.4rem;
     font-weight: bold;
+    transition: 300ms;
     user-select: none;
     svg{
         width: 23px;
     }
+}
+.sideBar nav ul li:hover{
+    background-color: rgb(255,255,255,0.4);
 }
 .sideBar nav ul li.lastGeneralItem{
     margin-top: 80px;
@@ -161,16 +167,16 @@ body{
 
 .projectsPanel{
     display:grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 40% 50%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
     padding: 30px 15px;
-    gap: 20px;
+    gap: 30px;
 }
-.projectsPanel .projects, .news .announcements , .news .trending{
+.projectsPanel .projects,  .announcements ,  .trending{
     position:relative;
     margin-top: 30px;
 }
-.projectsPanel .projects::before, .news .announcements::before , .news .trending::before{
+.projectsPanel .projects::before,  .announcements::before ,  .trending::before{
     top: -40px;
     font-size: 1.1rem;
     margin: 5px 0;
@@ -191,25 +197,23 @@ body{
     content:"Your Projects"
 }
 .projectsPanel .projects .box-project{
-    padding: 30px 15px;
+    padding: 30px 20px;
     display:flex;
     flex-direction: column;
-    height: 208px;
     justify-content: space-between;
-    border-left:#f0b835 solid 5px;
+    border-left:#f0b835 solid 8px;
     border-radius: 5px;
     background:white;
         box-shadow: 0 0 5px #999;
 
 }
 .projects .box-project .title{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight:bold;
     margin: 5px 0;
 }
 .projects .box-project p{
-    color: #8e8e8e;
-    font-size: 14px;
+    color: rgb(0,0,0,0.7);
 }
 .projects .box-project .reactions{
     margin-left: auto;
@@ -220,64 +224,65 @@ body{
     background:white;
     appearance: none;
     margin: 0 10px;
+    transition: 300ms;
     svg{
         width: 23px;
     }
 }
+.projects .box-project .reactions button:hover{
+    transform: scale(1.2);
+}
 
 /* News Panel */
-.news .announcements::before{
+ .announcements::before{
     content: "Announcements"
 }
-.news .announcements .container{
+ .announcements .container{
     padding: 25px 30px;
     background:white;
-    margin-right: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px #999;
 }
-.news .announcements .container .row{
+ .announcements .container .row{
     border-bottom: solid 1px grey;
     padding: 10px 0;
 }
-.news .container .row .title{
+ .container .row .title{
     font-size: .9rem;
     font-weight:bold;
     margin: 2px 0;
 }
-.news .container .row p{
+ .container .row p{
     font-size: 14px;
     color: #a2a2a2;
 }
 
-.news .trending::before{
+ .trending::before{
     content: "Trending";
 }
-.news .trending{
-    margin-top: 80px;
+ .trending{
+    align-self: end;
 }
-.news .trending .container{
+ .trending .container{
     padding: 20px;
     background:white;
-    margin-right: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px #999;   
-    height:260px;
 }
-.news .trending .row{
+ .trending .row{
     display: flex;
     align-items:center;
     gap: 10px;
 }
-.news .trending .row:not(:last-child){
+ .trending .row:not(:last-child){
     margin-bottom: 15px;
 
 }
-.news .row img{
+ .row img{
     width:45px;
     border-radius: 50vw;
 }
-.news .trending .row p{
+ .trending .row p{
     color: #a2a2a2;
 }
 
