@@ -106,6 +106,7 @@ body{
 }
 .header .searchPanel .profile img{
     border-radius: 50vw;
+    width: 40px;
 }
 
 .header .welcomePanel{
@@ -119,6 +120,9 @@ body{
     gap:10px;
     font-weight: bold;
     align-items: center;
+}
+.header .welcomePanel .profilePreview img{
+    width: 60px;
 }
 .header .profilePreview > img{
     border-radius: 50vw;
@@ -155,7 +159,7 @@ body{
 }
 .projectsPanel .projects::before, .news .announcements::before , .news .trending::before{
     top: -40px;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin: 5px 0;
     display:block;
     font-weight: 500;
@@ -168,7 +172,7 @@ body{
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 25px;
 }
 .projectsPanel .projects::before{
     content:"Your Projects"
@@ -177,12 +181,12 @@ body{
     padding: 30px 15px;
     display:flex;
     flex-direction: column;
-    height: 200px;
+    height: 208px;
     justify-content: space-between;
     border-left:#f0b835 solid 5px;
     border-radius: 5px;
     background:white;
-        box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 5px #999;
 
 }
 .projects .box-project .title{
@@ -215,7 +219,7 @@ body{
 .news .announcements .container{
     padding: 25px 30px;
     background:white;
-    margin-right: 80px;
+    margin-right: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px #999;
 }
@@ -237,22 +241,27 @@ body{
     content: "Trending";
 }
 .news .trending{
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .news .trending .container{
-    padding: 15px;
+    padding: 20px;
     background:white;
-    margin-right: 80px;
+    margin-right: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px #999;   
+    height:260px;
 }
 .news .trending .row{
     display: flex;
     align-items:center;
     gap: 10px;
+}
+.news .trending .row:not(:last-child){
     margin-bottom: 15px;
+
 }
 .news .row img{
+    width:45px;
     border-radius: 50vw;
 }
 .news .trending .row p{
