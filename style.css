@@ -16,12 +16,24 @@ body{
 /* SideBar */
 
 .sideBar{
-    flex: 25%;
+    width: 30%;
     min-height: 100%;
     background: #1c94d3;
     color: white;
     fill: white;
+    transition: 1s;
     padding: 15px 20px;
+}
+
+.sideBar.closed h1{
+    display:none;
+}
+.sideBar.closed{
+    width: 70px;
+    padding:15px 10px;
+}
+.sideBar.closed nav{
+    margin-left: 20px;
 }
 .sideBar > .title{
     display:flex;
@@ -58,6 +70,7 @@ body{
 .content{
     flex: 100%;
     background:#e2e8f0;
+    transition: 1s;
 }
 
 
